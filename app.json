@@ -61,8 +61,8 @@
         "measure_temperature"
       ],
       "images": {
-        "large": "/drivers/laser-egg/assets/images/large.png",
-        "small": "/drivers/laser-egg/assets/images/small.png"
+        "large": "/drivers/laser-egg/assets/images/large.jpg",
+        "small": "/drivers/laser-egg/assets/images/small.jpg"
       },
       "settings": [
         {
@@ -125,8 +125,8 @@
         "measure_voc"
       ],
       "images": {
-        "large": "/drivers/laser-egg-chemical/assets/images/large.png",
-        "small": "/drivers/laser-egg-chemical/assets/images/small.png"
+        "large": "/drivers/laser-egg-chemical/assets/images/large.jpg",
+        "small": "/drivers/laser-egg-chemical/assets/images/small.jpg"
       },
       "settings": [
         {
@@ -189,8 +189,8 @@
         "measure_temperature"
       ],
       "images": {
-        "large": "/drivers/laser-egg-co2/assets/images/large.png",
-        "small": "/drivers/laser-egg-co2/assets/images/small.png"
+        "large": "/drivers/laser-egg-co2/assets/images/large.jpg",
+        "small": "/drivers/laser-egg-co2/assets/images/small.jpg"
       },
       "settings": [
         {

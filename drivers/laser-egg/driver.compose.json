@@ -12,8 +12,8 @@
     "measure_temperature"
   ],
   "images": {
-    "large": "/drivers/laser-egg/assets/images/large.png",
-    "small": "/drivers/laser-egg/assets/images/small.png"
+    "large": "/drivers/laser-egg/assets/images/large.jpg",
+    "small": "/drivers/laser-egg/assets/images/small.jpg"
   },
   "settings": [
     {

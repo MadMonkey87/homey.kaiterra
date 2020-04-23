@@ -13,8 +13,8 @@
     "measure_temperature"
   ],
   "images": {
-    "large": "/drivers/laser-egg-co2/assets/images/large.png",
-    "small": "/drivers/laser-egg-co2/assets/images/small.png"
+    "large": "/drivers/laser-egg-co2/assets/images/large.jpg",
+    "small": "/drivers/laser-egg-co2/assets/images/small.jpg"
   },
   "settings": [
     {

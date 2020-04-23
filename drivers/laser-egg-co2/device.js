@@ -10,7 +10,6 @@ class LaserEggCO2Device extends Homey.Device {
 
 		const settings = this.getSettings();
 		const pollInterval = settings.pollInterval;
-		this.log(pollInterval);
 		const POLL_INTERVAL = 1000 * 60 * pollInterval;
 
         this.poll();
@@ -28,18 +27,44 @@ class LaserEggCO2Device extends Homey.Device {
 		axios.get('https://api.kaiterra.cn/v1/lasereggs/' + id + '?key=' + Homey.env.API_KEY)
 		.then(function (response) {
 
-			device.setCapabilityValue("measure_humidity", response.data['info.aqi'].data.humidity);
-			device.setCapabilityValue("measure_temperature", response.data['info.aqi'].data.temp);
-			device.setCapabilityValue("measure_pm25", response.data['info.aqi'].data.pm25);
-			device.setCapabilityValue("measure_pm10", response.data['info.aqi'].data.pm10);
-			device.setCapabilityValue("measure_co2", response.data['info.aqi'].data.data.co2);
-			
-			device.log('Updated device successfully: ' + id);
+			let humidity = response.data['info.aqi'].data.humidity;
+			let pm25 = response.data['info.aqi'].data.pm25;
+			let pm10 = response.data['info.aqi'].data.pm10;
+			let co2 = response.data['info.aqi'].data.co2;
+			let temp = response.data['info.aqi'].data.temp;
 
-			return Promise.resolve();
+			if(!humidity && !pm25 && !pm10 && !co2 && !temp){
+				device.setUnavailable("Device is offline");
+			} else {
+
+				device.setAvailable();
+
+				if(humidity){
+					device.setCapabilityValue("measure_humidity", humidity);
+				}
+
+				if(temp){
+					device.setCapabilityValue("measure_temperature", temp);
+				}
+
+				if(pm25){
+					device.setCapabilityValue("measure_pm25", pm25);
+				}
+
+				if(pm10){
+					device.setCapabilityValue("measure_pm10", pm10);
+				}
+
+				if(co2){
+					device.setCapabilityValue("measure_co2", co2);
+				}
+			}
+
+			device.log('Updated device successfully: ' + id);
 		})
 		.catch(function (error) {
 			device.log('error: ' + error);
+			device.setUnavailable(error);
 		});
 	}
 }
