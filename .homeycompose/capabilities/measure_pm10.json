@@ -30,40 +30,5 @@
     "getable": true,
     "setable": false,
     "uiComponent": "sensor",
-    "icon": "assets/images/measure_PM10.svg",
-    "$flow": {
-      "triggers": [
-        {
-          "id": "measure_pm10_changed",
-          "title": {
-            "en": "The PM10 value has changed",
-            "nl": "De PM10 waarde is veranderd",
-            "de": "Der PM10-Wert hat sich geändert",
-            "fr": "La valeur PM10 a changé",
-            "it": "Il valore di PM10 è cambiato",
-            "sv": "PM10-värdet har ändrats",
-            "no": "PM10-verdien er endret",
-            "es": "El valor de PM10 ha cambiado",
-            "da": "PM10-værdien har ændret sig"
-          },
-          "tokens": [
-            {
-              "name": "measure_pm10",
-              "title": {
-                "en": "PM10",
-                "nl": "PM10",
-                "de": "PM10",
-                "fr": "PM10",
-                "it": "PM10",
-                "sv": "PM10",
-                "no": "PM10",
-                "es": "PM10"
-              },
-              "type": "number",
-              "example": 2
-            }
-          ]
-        }
-      ]
-    }
+    "icon": "assets/images/measure_PM10.svg"
   }
