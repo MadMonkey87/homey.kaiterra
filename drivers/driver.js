@@ -18,8 +18,12 @@ class Driver extends Homey.Driver {
 				password: password
 			  })
 			  .then(function (response) {
-				token = response.data.token;
-				callback(null, token != null );
+				if(response.status === 200){
+					token = response.data.token;
+					callback(null, token != null );
+				} else {
+					callback(null, false );
+				}
 			  })
 			  .catch(function (error) {
 				console.log('error while validating credentials: ' + error);

@@ -242,23 +242,37 @@
   "capabilities": {
     "measure_pm10": {
       "type": "number",
-      "uiComponent": "sensor",
-      "icon": "assets/images/measure_PM10.svg",
       "title": {
         "en": "PM10",
-        "de": "PM10"
+        "nl": "PM10",
+        "de": "PM10",
+        "fr": "PM10",
+        "it": "PM10",
+        "sv": "PM10",
+        "no": "PM10",
+        "es": "PM10"
       },
+      "units": {
+        "en": "μg/m3"
+      },
+      "insights": true,
       "desc": {
-        "en": "particulate matter",
-        "de": "Feinstaub"
+        "en": "Atmospheric Particulate Matter (μg/m3)",
+        "nl": "Deeltjesvormige luchtverontreiniging (μg/m3)",
+        "de": "Atmosphärischer Feinstaub (μg/m3)",
+        "fr": "Particules en suspension (μg/m3)",
+        "it": "Particolato atmosferico (μg/m3)",
+        "sv": "Atmosfäriskt partikelämne (μg/m3)",
+        "no": "Atmosfæriske partikler (μg/m3)",
+        "es": "Partículas atmosféricas (μg/m3)",
+        "da": "Atmosfæriske partikler (μg/m3)"
       },
+      "chartType": "spline",
+      "decimals": 2,
       "getable": true,
       "setable": false,
-      "insights": true,
-      "units": {
-        "en": "µg/m³",
-        "de": "µg/m³"
-      }
+      "uiComponent": "sensor",
+      "icon": "assets/images/measure_PM10.svg"
     },
     "measure_voc": {
       "type": "number",
@@ -275,6 +289,8 @@
       "getable": true,
       "setable": false,
       "insights": true,
+      "chartType": "spline",
+      "decimals": 2,
       "units": {
         "en": "ppb",
         "de": "ppb"
