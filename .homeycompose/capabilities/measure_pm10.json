@@ -1,0 +1,20 @@
+{
+    "type": "number",
+    "uiComponent": "sensor",
+    "icon": "assets/images/measure_PM10.svg",
+    "title": {
+      "en": "PM10",
+      "de": "PM10"
+    },
+    "desc": {
+      "en": "particulate matter",
+      "de": "Feinstaub"
+    },
+    "getable": true,
+    "setable": false,
+    "insights": true,
+    "units": {
+        "en": "µg/m³",
+        "de": "µg/m³"
+    }
+  }

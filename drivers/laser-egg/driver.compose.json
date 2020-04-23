@@ -1,0 +1,63 @@
+{
+  "id": "laser-egg",
+  "name": {
+    "en": "Laser Egg",
+    "de": "Laser Egg"
+  },
+  "class": "sensor",
+  "capabilities": [
+    "measure_humidity",
+    "measure_pm25",
+    "measure_pm10",
+    "measure_temperature"
+  ],
+  "images": {
+    "large": "/drivers/laser-egg/assets/images/large.png",
+    "small": "/drivers/laser-egg/assets/images/small.png"
+  },
+  "settings": [
+    {
+      "type": "group",
+      "label": {
+        "en": "General settings",
+        "de": "Generelle Einstellungen"
+      },
+      "children": [
+        {
+          "id": "pollInterval",
+          "type": "number",
+          "label": {
+            "en": "Poll interval in minutes (default is 15)",
+            "de": "Abfrageinterval in Minuten (Standart ist 15)"
+          },
+          "value": 15,
+          "min": 1,
+          "max": 1440
+        }
+      ]
+    }
+  ],
+  "pair": [
+    {
+      "id": "login",
+      "template": "login_credentials",
+      "navigation": {
+        "next": "list_devices"
+      }
+    },
+    {
+      "id": "list_devices",
+      "template": "list_devices",
+      "navigation": {
+        "next": "add_devices"
+      },
+      "options": {
+        "singular": false
+      }
+    },
+    {
+      "id": "add_devices",
+      "template": "add_devices"
+    }
+  ]
+}

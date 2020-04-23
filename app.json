@@ -1,0 +1,284 @@
+{
+  "id": "cn.kaiterra",
+  "version": "1.0.0",
+  "compatibility": ">=4.0.0",
+  "sdk": 2,
+  "brandColor": "#54BC7A",
+  "name": {
+    "en": "Kaiterra",
+    "de": "Kaiterra"
+  },
+  "description": {
+    "en": "Adds support for Laser Egg and Sense Edge sensors",
+    "de": "Verbindet Laser Egg und Sense Edge Geräte mit deinem Homey"
+  },
+  "tags": {
+    "en": [
+      "kaiterra",
+      "air quality",
+      "co2",
+      "voc"
+    ],
+    "de": [
+      "kaiterra",
+      "Luftqualität",
+      "co2",
+      "voc"
+    ]
+  },
+  "category": [
+    "tools",
+    "climate"
+  ],
+  "permissions": [],
+  "images": {
+    "large": "/assets/images/large.png",
+    "small": "/assets/images/small.png"
+  },
+  "author": {
+    "name": "Philippe Wechsler",
+    "email": "myself@philippewechsler.ch"
+  },
+  "contributing": {
+    "donate": {
+      "paypal": {
+        "username": "madmonkey87"
+      }
+    }
+  },
+  "drivers": [
+    {
+      "id": "laser-egg",
+      "name": {
+        "en": "Laser Egg",
+        "de": "Laser Egg"
+      },
+      "class": "sensor",
+      "capabilities": [
+        "measure_humidity",
+        "measure_pm25",
+        "measure_pm10",
+        "measure_temperature"
+      ],
+      "images": {
+        "large": "/drivers/laser-egg/assets/images/large.png",
+        "small": "/drivers/laser-egg/assets/images/small.png"
+      },
+      "settings": [
+        {
+          "type": "group",
+          "label": {
+            "en": "General settings",
+            "de": "Generelle Einstellungen"
+          },
+          "children": [
+            {
+              "id": "pollInterval",
+              "type": "number",
+              "label": {
+                "en": "Poll interval in minutes (default is 15)",
+                "de": "Abfrageinterval in Minuten (Standart ist 15)"
+              },
+              "value": 15,
+              "min": 1,
+              "max": 1440
+            }
+          ]
+        }
+      ],
+      "pair": [
+        {
+          "id": "login",
+          "template": "login_credentials",
+          "navigation": {
+            "next": "list_devices"
+          }
+        },
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
+          },
+          "options": {
+            "singular": false
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ]
+    },
+    {
+      "id": "laser-egg-chemical",
+      "name": {
+        "en": "Laser Egg+ Chemical",
+        "de": "Laser Egg+ Chemical"
+      },
+      "class": "sensor",
+      "capabilities": [
+        "measure_humidity",
+        "measure_pm25",
+        "measure_pm10",
+        "measure_temperature",
+        "measure_voc"
+      ],
+      "images": {
+        "large": "/drivers/laser-egg-chemical/assets/images/large.png",
+        "small": "/drivers/laser-egg-chemical/assets/images/small.png"
+      },
+      "settings": [
+        {
+          "type": "group",
+          "label": {
+            "en": "General settings",
+            "de": "Generelle Einstellungen"
+          },
+          "children": [
+            {
+              "id": "pollInterval",
+              "type": "number",
+              "label": {
+                "en": "Poll interval in minutes (default is 15)",
+                "de": "Abfrageinterval in Minuten (Standart ist 15)"
+              },
+              "value": 15,
+              "min": 1,
+              "max": 1440
+            }
+          ]
+        }
+      ],
+      "pair": [
+        {
+          "id": "login",
+          "template": "login_credentials",
+          "navigation": {
+            "next": "list_devices"
+          }
+        },
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
+          },
+          "options": {
+            "singular": false
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ]
+    },
+    {
+      "id": "laser-egg-co2",
+      "name": {
+        "en": "Laser Egg+ CO2",
+        "de": "Laser Egg+ CO2"
+      },
+      "class": "sensor",
+      "capabilities": [
+        "measure_co2",
+        "measure_humidity",
+        "measure_pm25",
+        "measure_pm10",
+        "measure_temperature"
+      ],
+      "images": {
+        "large": "/drivers/laser-egg-co2/assets/images/large.png",
+        "small": "/drivers/laser-egg-co2/assets/images/small.png"
+      },
+      "settings": [
+        {
+          "type": "group",
+          "label": {
+            "en": "General settings",
+            "de": "Generelle Einstellungen"
+          },
+          "children": [
+            {
+              "id": "pollInterval",
+              "type": "number",
+              "label": {
+                "en": "Poll interval in minutes (default is 15)",
+                "de": "Abfrageinterval in Minuten (Standart ist 15)"
+              },
+              "value": 15,
+              "min": 1,
+              "max": 1440
+            }
+          ]
+        }
+      ],
+      "pair": [
+        {
+          "id": "login",
+          "template": "login_credentials",
+          "navigation": {
+            "next": "list_devices"
+          }
+        },
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
+          },
+          "options": {
+            "singular": false
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ]
+    }
+  ],
+  "capabilities": {
+    "measure_pm10": {
+      "type": "number",
+      "uiComponent": "sensor",
+      "icon": "assets/images/measure_PM10.svg",
+      "title": {
+        "en": "PM10",
+        "de": "PM10"
+      },
+      "desc": {
+        "en": "particulate matter",
+        "de": "Feinstaub"
+      },
+      "getable": true,
+      "setable": false,
+      "insights": true,
+      "units": {
+        "en": "µg/m³",
+        "de": "µg/m³"
+      }
+    },
+    "measure_voc": {
+      "type": "number",
+      "uiComponent": "sensor",
+      "icon": "assets/images/measure_VOC.svg",
+      "title": {
+        "en": "VOC",
+        "de": "VOC"
+      },
+      "desc": {
+        "en": "volatile organic compounds",
+        "de": "flüchtige organische Verbindungen"
+      },
+      "getable": true,
+      "setable": false,
+      "insights": true,
+      "units": {
+        "en": "ppb",
+        "de": "ppb"
+      }
+    }
+  }
+}
