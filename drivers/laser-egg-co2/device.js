@@ -64,7 +64,7 @@ class LaserEggCO2Device extends Homey.Device {
 		})
 		.catch(function (error) {
 			device.log('error: ' + error);
-			device.setUnavailable(error);
+			device.setUnavailable(error.error);
 		});
 	}
 }
