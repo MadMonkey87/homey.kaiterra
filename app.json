@@ -9,8 +9,8 @@
     "de": "Kaiterra"
   },
   "description": {
-    "en": "Adds support for Laser Egg and Sense Edge sensors",
-    "de": "Verbindet Laser Egg und Sense Edge Geräte mit deinem Homey"
+    "en": "Adds support for Laser Egg sensors",
+    "de": "Verbindet Laser Egg Geräte mit deinem Homey"
   },
   "tags": {
     "en": [
@@ -30,11 +30,11 @@
     "tools",
     "climate"
   ],
-  "permissions": [],
   "images": {
-    "large": "/assets/images/large.png",
-    "small": "/assets/images/small.png"
+    "large": "/assets/images/Large.png",
+    "small": "/assets/images/Small.png"
   },
+  "permissions": [],
   "author": {
     "name": "Philippe Wechsler",
     "email": "myself@philippewechsler.ch"
@@ -128,9 +128,10 @@
         "measure_temperature"
       ],
       "images": {
-        "large": "/drivers/laser-egg/assets/images/large.jpg",
-        "small": "/drivers/laser-egg/assets/images/small.jpg"
+        "large": "/drivers/laser-egg/assets/images/Large.jpg",
+        "small": "/drivers/laser-egg/assets/images/Small.jpg"
       },
+      "icon": "/drivers/laser-egg/assets/icon.svg",
       "settings": [
         {
           "type": "group",
@@ -192,9 +193,10 @@
         "measure_voc"
       ],
       "images": {
-        "large": "/drivers/laser-egg-chemical/assets/images/large.jpg",
-        "small": "/drivers/laser-egg-chemical/assets/images/small.jpg"
+        "large": "/drivers/laser-egg-chemical/assets/images/Large.jpg",
+        "small": "/drivers/laser-egg-chemical/assets/images/Small.jpg"
       },
+      "icon": "/drivers/laser-egg-chemical/assets/icon.svg",
       "settings": [
         {
           "type": "group",
@@ -256,9 +258,10 @@
         "measure_temperature"
       ],
       "images": {
-        "large": "/drivers/laser-egg-co2/assets/images/large.jpg",
-        "small": "/drivers/laser-egg-co2/assets/images/small.jpg"
+        "large": "/drivers/laser-egg-co2/assets/images/Large.jpg",
+        "small": "/drivers/laser-egg-co2/assets/images/Small.jpg"
       },
+      "icon": "/drivers/laser-egg-co2/assets/icon.svg",
       "settings": [
         {
           "type": "group",

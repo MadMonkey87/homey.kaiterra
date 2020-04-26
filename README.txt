@@ -1,1 +1,1 @@
-Adds support for Laser Egg and Sense Edge sensors
+Adds support for Laser Egg sensors
