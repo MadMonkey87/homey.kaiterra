@@ -1,6 +1,6 @@
 {
   "id": "cn.kaiterra",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "compatibility": ">=4.0.0",
   "sdk": 2,
   "brandColor": "#54BC7A",
@@ -9,8 +9,8 @@
     "de": "Kaiterra"
   },
   "description": {
-    "en": "Adds support for Laser Egg sensors",
-    "de": "Verbindet Laser Egg Geräte mit deinem Homey"
+    "en": "Get to know your air",
+    "de": "Sei dir bewusst welche Luft du atmest"
   },
   "tags": {
     "en": [
