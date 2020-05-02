@@ -1,4 +1,4 @@
-Kaiterra
+Introduction
 Adds support for Laser Egg sensors by Kaiterra. This app allows you to monitor various air quality indicators such as pm10, pm2.5, relative humidity, CO2, VOC and the temperature.
 
 Setup

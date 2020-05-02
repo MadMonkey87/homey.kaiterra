@@ -1,6 +1,6 @@
 {
   "id": "cn.kaiterra",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "compatibility": ">=4.0.0",
   "sdk": 2,
   "brandColor": "#54BC7A",
@@ -36,8 +36,7 @@
   },
   "permissions": [],
   "author": {
-    "name": "Philippe Wechsler",
-    "email": "myself@philippewechsler.ch"
+    "name": "Philippe Wechsler"
   },
   "contributing": {
     "donate": {
