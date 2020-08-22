@@ -152,39 +152,6 @@
               "max": 1440
             }
           ]
-        },
-        {
-          "id": "info",
-          "type": "group",
-          "label": {
-            "en": "Info"
-          },
-          "children": [
-            {
-              "id": "firmware",
-              "type": "label",
-              "label": {
-                "en": "Firmware"
-              },
-              "value": "Unknown"
-            },
-            {
-              "id": "serial",
-              "type": "label",
-              "label": {
-                "en": "Serial"
-              },
-              "value": "Unknown"
-            },
-            {
-              "id": "id",
-              "type": "label",
-              "label": {
-                "en": "Id"
-              },
-              "value": "Unknown"
-            }
-          ]
         }
       ],
       "pair": [
@@ -250,39 +217,6 @@
               "max": 1440
             }
           ]
-        },
-        {
-          "id": "info",
-          "type": "group",
-          "label": {
-            "en": "Info"
-          },
-          "children": [
-            {
-              "id": "firmware",
-              "type": "label",
-              "label": {
-                "en": "Firmware"
-              },
-              "value": "Unknown"
-            },
-            {
-              "id": "serial",
-              "type": "label",
-              "label": {
-                "en": "Serial"
-              },
-              "value": "Unknown"
-            },
-            {
-              "id": "id",
-              "type": "label",
-              "label": {
-                "en": "Id"
-              },
-              "value": "Unknown"
-            }
-          ]
         }
       ],
       "pair": [
@@ -346,39 +280,6 @@
               "value": 15,
               "min": 1,
               "max": 1440
-            }
-          ]
-        },
-        {
-          "id": "info",
-          "type": "group",
-          "label": {
-            "en": "Info"
-          },
-          "children": [
-            {
-              "id": "firmware",
-              "type": "label",
-              "label": {
-                "en": "Firmware"
-              },
-              "value": "Unknown"
-            },
-            {
-              "id": "serial",
-              "type": "label",
-              "label": {
-                "en": "Serial"
-              },
-              "value": "Unknown"
-            },
-            {
-              "id": "id",
-              "type": "label",
-              "label": {
-                "en": "Id"
-              },
-              "value": "Unknown"
             }
           ]
         }

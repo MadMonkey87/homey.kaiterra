@@ -13,7 +13,7 @@ class Driver extends Homey.Driver {
 			const username = data.username;
 			const password = data.password;
 		  
-			axios.post('https://api.kaiterra.cn/v1/auth/login', {
+			axios.post('https://dashboard.kaiterra.com/v1/auth/login', {
 				email: username,
 				password: password
 			  })
@@ -39,13 +39,13 @@ class Driver extends Homey.Driver {
 				}
 			  };
 
-			axios.get('https://api.kaiterra.cn/v1/account/me/device', config)
+			axios.get('https://dashboard.kaiterra.com/v1/account/me/device', config)
 			  .then(function (response) {
 				const devices = response.data.map(kaiterraDevice => {
 					return {
 						name: kaiterraDevice.name,
-						data: { id: kaiterraDevice.timeID },
-						settings: { pollInterval: 15 }
+						data: { id: kaiterraDevice.uuid },
+						settings: { pollInterval: 15, id: kaiterraDevice.uuid, serial: kaiterraDevice.serial, firmware: kaiterraDevice.firmware_version }
 					};
 				});
 				callback(null, devices );

@@ -6,8 +6,8 @@ const axios = require('axios');
 class LaserEggChemialDevice extends Homey.Device {
 	
 	onInit() {
-		this.log('LaserEggChemialDevice has been inited');
-		
+		this.log('LaserEggChemialDevice has been inited: ' + this.getData().id);
+
 		const settings = this.getSettings();
 		const pollInterval = settings.pollInterval;
 		const POLL_INTERVAL = 1000 * 60 * pollInterval;
@@ -24,7 +24,7 @@ class LaserEggChemialDevice extends Homey.Device {
 
 		this.log('Polling device: ' + id);
 
-		axios.get('https://api.kaiterra.cn/v1/lasereggs/' + id + '?key=' + Homey.env.API_KEY)
+		axios.get('https://dashboard.kaiterra.com/v1/lasereggs/' + id + '?key=' + Homey.env.API_KEY)
 		.then(function (response) {
 
 			let humidity = response.data['info.aqi'].data.humidity;

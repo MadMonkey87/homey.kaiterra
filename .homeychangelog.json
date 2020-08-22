@@ -7,5 +7,8 @@
   },
   "1.0.2": {
     "en": "improved icon"
+  },
+  "1.1.0": {
+    "en": "improved logging, adapted to api changes, show more device details"
   }
 }
