@@ -24,7 +24,7 @@ class LaserEggChemialDevice extends Homey.Device {
 
 		this.log('Polling device: ' + id);
 
-		axios.get('https://dashboard.kaiterra.com/v1/lasereggs/' + id + '?key=' + Homey.env.API_KEY)
+		axios.get('https://api.eur.kaiterra.com/v1/lasereggs/' + id + '?key=' + Homey.env.API_KEY)
 		.then(function (response) {
 
 			let humidity = response.data['info.aqi'].data.humidity;

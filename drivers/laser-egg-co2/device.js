@@ -24,13 +24,13 @@ class LaserEggCO2Device extends Homey.Device {
 
 		this.log('Polling device: ' + id);
 
-		axios.get('https://dashboard.kaiterra.com/v1/lasereggs/' + id + '?key=' + Homey.env.API_KEY)
+		axios.get('https://api.eur.kaiterra.com/v1/lasereggs/' + id + '?key=' + Homey.env.API_KEY)
 		.then(function (response) {
 
 			let humidity = response.data['info.aqi'].data.humidity;
 			let pm25 = response.data['info.aqi'].data.pm25;
 			let pm10 = response.data['info.aqi'].data.pm10;
-			let co2 = response.data['info.aqi'].data.co2;
+			let co2 = response.data['info.aqi'].data.rco2;
 			let temp = response.data['info.aqi'].data.temp;
 
 			if(!humidity && !pm25 && !pm10 && !co2 && !temp){
