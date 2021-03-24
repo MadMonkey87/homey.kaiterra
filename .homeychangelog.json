@@ -16,5 +16,8 @@
   },
   "1.1.2": {
     "en": "adapted to api changes"
+  },
+  "1.2.0": {
+    "en": "upgraded sdk"
   }
 }
